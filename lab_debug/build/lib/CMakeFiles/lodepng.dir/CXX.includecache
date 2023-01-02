@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_debug/lib/lodepng/lodepng.cpp
+lodepng.h
+/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_debug/lib/lodepng/lodepng.h
+limits.h
+-
+stdio.h
+-
+stdlib.h
+-
+
+/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_debug/lib/lodepng/lodepng.h
+string.h
+-
+vector
+-
+string
+-
+lodepng.h
+/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_debug/lib/lodepng/lodepng.h
+iostream
+-
+lodepng.h
+/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_debug/lib/lodepng/lodepng.h
+

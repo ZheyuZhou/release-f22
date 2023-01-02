@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_debug/build/test-lib_tests-b12d07c.cmake")
+  include("/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_debug/build/test-lib_tests-b12d07c.cmake")
+else()
+  add_test(test-lib_NOT_BUILT-b12d07c test-lib_NOT_BUILT-b12d07c)
+endif()

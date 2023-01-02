@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/cs225/HSLAPixel.h
+iostream
+-
+sstream
+-
+
+../lib/cs225/PNG.h
+string
+-
+HSLAPixel.h
+../lib/cs225/HSLAPixel.h
+
+/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_debug/src/sketchify.cpp
+cstdlib
+-
+cmath
+-
+cs225/PNG.h
+/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_debug/src/cs225/PNG.h
+cs225/HSLAPixel.h
+/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_debug/src/cs225/HSLAPixel.h
+

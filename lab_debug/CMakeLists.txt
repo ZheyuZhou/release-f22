@@ -132,10 +132,10 @@ file(GLOB_RECURSE tests_src CONFIGURE_DEPENDS ${tests_dir}/*.cpp)
 
 include(Catch)
 
-add_executable(test ${tests_src})
-target_link_libraries(test PRIVATE Catch2::Catch2WithMain libs src)
+add_executable(test-lib ${tests_src})
+target_link_libraries(test-lib PRIVATE Catch2::Catch2WithMain libs src)
 
-catch_discover_tests(test)
+catch_discover_tests(test-lib)
 
 # Add the assignment entrypoints using our libs and src code.
 foreach(entrypoint IN LISTS assignment_entrypoints)

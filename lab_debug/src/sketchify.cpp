@@ -29,18 +29,18 @@ PNG* setupOutput(unsigned w, unsigned h) {
  * @return a pointer to the color to use when sketchifying
  */
 HSLAPixel* myFavoriteColor() {
-    HSLAPixel p(193, 0.8, 0.5);
-    return &p;
+    HSLAPixel* p = new HSLAPixel(-1, 0.8, 0.5);
+    return p;
 }
 
 void sketchify(std::string inputFile, std::string outputFile) {
     // Load in.png
-    PNG* original = NULL;
-
+    PNG* original = new PNG();
+    std::cout << "Reached line " << __LINE__ << std::endl;
     original->readFromFile(inputFile);
     unsigned width = original->width();
     unsigned height = original->height();
-
+    std::cout << "Reached line " << __LINE__ << std::endl;
     // Create out.png
     PNG* output;
     setupOutput(width, height);
@@ -52,6 +52,7 @@ void sketchify(std::string inputFile, std::string outputFile) {
     // left, color it my favorite color in the output
     for (unsigned y = 1; 0 < y < height; y++) {
         for (unsigned x = 1; 0 < x < width; x++) {
+            std::cout << "Reached line " << __LINE__ << std::endl;
             // Calculate the pixel difference
             HSLAPixel& prev = original->getPixel(x - 1, y - 1);
             HSLAPixel& curr = original->getPixel(x, y);
@@ -63,6 +64,7 @@ void sketchify(std::string inputFile, std::string outputFile) {
             if (diff > 20) {
                 currOutPixel = *myPixel;
             }
+            std::cout << "Reached line " << __LINE__ << std::endl;
         }
     }
 
