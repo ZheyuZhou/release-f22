@@ -63,7 +63,7 @@ void sketchify(std::string inputFile, std::string outputFile) {
             // If the pixel is an edge pixel,
             // color the output pixel with my favorite color
 
-            HSLAPixel currOutPixel = (*output).getPixel(x, y);
+            HSLAPixel &currOutPixel = (*output).getPixel(x, y);
             // std::cout << "currOutPixel x y " << currOutPixel <<std::endl;
             if (diff > 20) {
                 // std::cout << "in diff " << std::endl;
