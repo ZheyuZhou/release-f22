@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_memory/build/test_lab2_tests-b12d07c.cmake")
+  include("/mnt/c/Users/14677/Documents/GitHub/release-f22/lab_memory/build/test_lab2_tests-b12d07c.cmake")
+else()
+  add_test(test_lab2_NOT_BUILT-b12d07c test_lab2_NOT_BUILT-b12d07c)
+endif()
